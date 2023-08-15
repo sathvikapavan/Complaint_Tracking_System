@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+.home-section .home-content{
+  position: relative;
+  padding-top: 104px;
+}
+.home-content .overview-boxes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 26px;
+}
+.overview-boxes .box{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: calc(300% / 1 - 20px);
+  background: rgb(117, 137, 163);
+  padding: 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.overview-boxes .box-topic{
+  font-size: 25px;
+  font-weight: 500;
+}
+button{
+  background-color:rgb(30, 139, 65);
+  border: none;
+  color: rgb(14, 16, 14);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin:4px 2px;
+  cursor:pointer;
+  border-radius: 20px;
+
+}
+</style>
+</head>
+    <body>
+    <tbody>
+        <div class="home-content"> <center><h1><b>TRANSPORT COMPLAINTS</b</h1></center></div>
+        <div class="container" align="right">
+            <a href="/admindashboard.html" ><b>BACK</b></a>
+        </div>
+        {% for item in complaints %}
+        <div class="home-content">
+        <div class="overview-boxes">
+        <div class="box">
+        <div class="right-side">
+        <div class="box-topic"><b>REGID::</b>{{item[0]}}</div>
+        <div class="container">
+            <tr>
+                <td><h2><b>COMPLAINTS::</b>{{item[1]}}</h2></td></br>
+            </tr>
+            <tr>
+              <td>
+                <form action="/view/{{item[2]}}" method="post">
+                  <input style="background-color:rgb(30, 139, 65)" type="submit" value="VIEW">
+                </form>
+              </td>
+            
+              <td>
+                <form action="/process/{{item[2]}}" method="post">
+                <input style="background-color:rgb(30, 139, 65)" type="submit" value="PROCESS">
+                </form>
+              </td>
+            
+              <td>
+                <form action="/sort/{{item[2]}}" method="post">
+                <input style="background-color:rgb(30, 139, 65)" type="submit" value="SORT">
+                </form>
+              </td>
+            </tr>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+        </tbody>
+    </body>
+</html>
