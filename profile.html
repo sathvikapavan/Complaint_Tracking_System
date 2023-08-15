@@ -1,0 +1,75 @@
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<!-- Font Awesome CSS -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+<html>
+  <head>
+    <style>
+      body {
+        background: #67B26F;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding: 0;
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+      }
+      .student-profile .card h3 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+    <body>
+        <div class="student-profile py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="card shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                      <h3 class="mb-0"><i class="far fa-clone pr-1"></i>MY PROFILE</h3>
+                    </div>
+                    <div class="card-body pt-0">
+                      <table class="table table-bordered">
+                        <tr> 
+                            <th width="30%">NAME</th>
+                            <td width="2%">:</td>
+                            <td>{{Name}}</td>
+                            
+                        </tr>
+                        <tr>
+                          <th width="30%">Roll</th>
+                          <td width="2%">:</td>
+                          <td>{{RegID}}</td>
+                        </tr>
+                        <tr>
+                          <th width="30%">DEPARTMENT </th>
+                          <td width="2%">:</td>
+                          <td>{{dept}}</td>
+                        </tr>
+                        <tr>
+                          <th width="30%">EMAIL</th>
+                          <td width="2%">:</td>
+                          <td>{{email}}</td>
+                        </tr>
+                        <tr>
+                          <th width="30%">PHNO</th>
+                          <td width="2%">:</td>
+                          <td>{{phno}}</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <div class="container">
+        <a href="dashboard.html"><b>BACK</b></a>
+      </div>
+
+    </body>
+</html>
